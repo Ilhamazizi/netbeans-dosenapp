@@ -89,12 +89,12 @@ public class DosenDataAccess {
         return false;
     }
     
-    public boolean Delete(Dosen dosen) {
+    public boolean Delete(int id) {
         String sql = "DELETE FROM dosen WHERE id =?";
 
         try {
             PreparedStatement statement = DBConnection.getConn().prepareStatement(sql);
-            statement.setInt(1, dosen.getId());
+            statement.setInt(1, id);
             int result = statement.executeUpdate();
             return result > 0;
 
