@@ -28,4 +28,8 @@ public class DBConnection {
             }
         }
     }
+    
+    public static Connection getConn() {
+        return conn;
+    }
 }
